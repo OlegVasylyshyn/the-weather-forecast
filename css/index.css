@@ -1,0 +1,28 @@
+.hidden {
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+main {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    height: 100px;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 300px;
+}
+
+.btn {
+    font-size: 28px;
+    background-color: #87CEFA;
+}

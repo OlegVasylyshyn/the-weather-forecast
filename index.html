@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Weather Forecast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="shortcut icon" href="img/logo.jpg">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="img/logo.jpg" alt="Logo"/></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            
+                <h2>Choose your country</h2>
+         
+                    <select id="country-dropdown" class="selectpicker" data-live-search="true">
+                        <option data-tokens="ukrain">Ukraine</option>
+                        <option data-tokens="germany">Germany</option>
+                        <option data-tokens="italy">Italy</option>
+                        <option data-tokens="spain">Spain</option>
+                    </select>    
+         
+            <div id="city-div" class="hidden">
+                <h2>Choose your city</h2>
+                <div class="center">
+                    <select id="city-dropdown">
+                        <option class="select-option" disabled selected value>Choose your city</option>
+                        <option class="select-option">this tag will be dynamically initialized</option>
+                        <option class="select-option">this tag will be dynamically initialized</option>
+                        <option class="select-option">this tag will be dynamically initialized</option>
+                    </select>    
+                </div>
+            </div>
+            <input type="button" id="wheather-button" value="show the weather" class="hidden"> 
+    </main>
+    <footer>
+        <div>
+            <p>© </p>
+        </div>
+        <div id="reference">
+            
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
