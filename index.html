@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/index.css"/>
-    <link rel="shortcut icon" href="img/logo.jpg">
+    <link rel="shortcut icon" href="img/weather-favicon.png">
 </head>
 <body>
     <header>
         <div id="logo">
-            <a href="index.html"><img src="img/logo.jpg" alt="Logo"/></a>
+            <a href="index.html"><img src="img/weather-logo.jpg" alt="Logo"/></a>
         </div>
         <nav>
             <ul>
@@ -23,31 +23,29 @@
         </nav>
     </header>
     <main>
+        <div id="country-dropdown" class="center">
+            <h2>Choose your country</h2>
+            <select id="country-select" class="selectpicker" data-live-search="true">
+                <option data-tokens="ukrain">Ukraine</option>
+                <option data-tokens="germany">Germany</option>
+                <option data-tokens="italy">Italy</option>
+                <option data-tokens="spain">Spain</option>
+            </select>    
+        </div>
             
-                <h2>Choose your country</h2>
-         
-                    <select id="country-dropdown" class="selectpicker" data-live-search="true">
-                        <option data-tokens="ukrain">Ukraine</option>
-                        <option data-tokens="germany">Germany</option>
-                        <option data-tokens="italy">Italy</option>
-                        <option data-tokens="spain">Spain</option>
-                    </select>    
-         
-            <div id="city-div" class="hidden">
-                <h2>Choose your city</h2>
-                <div class="center">
-                    <select id="city-dropdown">
-                        <option class="select-option" disabled selected value>Choose your city</option>
-                        <option class="select-option">this tag will be dynamically initialized</option>
-                        <option class="select-option">this tag will be dynamically initialized</option>
-                        <option class="select-option">this tag will be dynamically initialized</option>
-                    </select>    
-                </div>
-            </div>
-            <input type="button" id="wheather-button" value="show the weather" class="hidden"> 
+
+        <div id="city-dropdown" hidden>
+            <h2>Choose your city</h2>
+            <select id="city-select" class="selectpicker" data-live-search="true">
+                <option data-tokens="this">this tag will be dynamically initialized</option>
+                <option data-tokens="this">this tag will be dynamically initialized</option>
+                <option data-tokens="this">this tag will be dynamically initialized</option>
+            </select>    
+        </div>
+        <input type="button" id="wheather-button" value="show the weather" hidden> 
     </main>
     <footer>
-        <div>
+        <div> 
             <p>© </p>
         </div>
         <div id="reference">
