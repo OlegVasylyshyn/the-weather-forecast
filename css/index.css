@@ -2,8 +2,13 @@
     display: none;
 }
 
-.show{
-    display: block;
+main, html {
+    /* JUST FOR SLIDE */
+    overflow-x: hidden;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
 }
 
 main {
@@ -11,6 +16,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* OVERRIDE */
+    overflow-x: visible;
 }
 
 .dropdown-toggle {
@@ -24,4 +31,13 @@ main {
 .btn {
     font-size: 28px;
     background-color: #87CEFA;
+}
+
+#weather-button {
+    padding: 0;
+    margin: 0;
+}
+
+#button-div {
+    height: 100px;
 }

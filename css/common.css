@@ -1,12 +1,13 @@
 html, body {
     border: 0;
-    margin: 1px;
+    margin: 0 auto;
     padding: 1px;
     background-image: url('../img/weather-background-night.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 2000px;
 }
 
 header {
@@ -60,4 +61,5 @@ footer {
 .self-center {
     margin: auto;
 }
+
 
