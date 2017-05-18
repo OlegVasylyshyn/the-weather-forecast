@@ -36,10 +36,17 @@ header nav ul a {
 	text-shadow: 0 1px 0 white;
 }
 
+
+nav li a:visited {
+    text-decoration: none;
+    color: #337ab7;
+}
+
 nav li a:hover {
 	color: #FFF5EE;
 	text-decoration: none;
 }
+
 
 footer {
     position: fixed;

@@ -17,7 +17,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li id="home-li"><a href="#">Home</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
@@ -26,6 +26,7 @@
         <div id="country-dropdown" class="center">
             <h2>Choose your country</h2>
             <select id="country-select" class="selectpicker" data-live-search="true">
+                <!--<option disabled selected value>--</option>-->
                 <option data-tokens="ukrain">Ukraine</option>
                 <option data-tokens="germany">Germany</option>
                 <option data-tokens="italy">Italy</option>
@@ -43,7 +44,7 @@
         <div id="button-main-div" hidden>
             <h2>Here we go</h2>
             <div id="button-div">
-                <input type="button" id="weather-button" value="show the weather">     
+                <button type="button" class="btn btn-info">Show the weather</button>
             </div>
         </div>
     </main>
