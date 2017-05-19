@@ -1,25 +1,42 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>The Weather Forecast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="shortcut icon" href="./img/weather-favicon.png">
 </head>
+
 <body>
     <header>
-        <div id="logo">
-            <a href="index.html"><img src="./img/weather-logo.jpg" alt="Logo"/></a>
-        </div>
-        <nav>
-            <ul>
-                <li id="home-li"><a href="#">Home</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">The Weather Forecast</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" id="reset-button"><a href="#">Reset <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -31,7 +48,7 @@
                 <option data-tokens="germany">Germany</option>
                 <option data-tokens="italy">Italy</option>
                 <option data-tokens="spain">Spain</option>
-            </select>    
+            </select>
         </div>
         <div id="city-dropdown" hidden>
             <h2>Choose your city</h2>
@@ -39,7 +56,7 @@
                 <option data-tokens="this">this tag will be dynamically initialized</option>
                 <option data-tokens="this">this tag will be dynamically initialized</option>
                 <option data-tokens="this">this tag will be dynamically initialized</option>
-            </select>    
+            </select>
         </div>
         <div id="button-main-div" hidden>
             <h2>Here we go</h2>
@@ -49,19 +66,20 @@
         </div>
     </main>
     <footer>
-        <div> 
+        <div>
             <p>© </p>
         </div>
         <div id="reference">
-            
+
         </div>
     </footer>
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
+
 </html>

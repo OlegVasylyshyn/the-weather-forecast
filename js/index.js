@@ -22,7 +22,8 @@ $(function(){
         });
     });
     
-    $('#home-li').on('click', function(e) {
+    $('#reset-button').on('click', function(e) {
+        console.log("CLICK");
         e.preventDefault(); 
         $('#city-dropdown').hide("slide", { direction: "left", distance: 2000 }, 1000);
         $('#button-main-div').hide("slide", { direction: "left", distance: 2000 }, 1000);

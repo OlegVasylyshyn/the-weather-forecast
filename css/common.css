@@ -1,7 +1,6 @@
 html, body {
     border: 0;
     margin: 0 auto;
-    padding: 1px;
     background-image: url('../img/weather-background-night.png');
     background-attachment: fixed;
     background-position: center;
@@ -9,6 +8,43 @@ html, body {
     background-size: cover;
     max-width: 2000px;
 }
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 1px;
+    left: 1px;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.self-center {
+    margin: auto;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+}
+
+/*
 
 header {
     display: flex;
@@ -47,26 +83,7 @@ nav li a:hover {
 	text-decoration: none;
 }
 
-
-footer {
-    position: fixed;
-    bottom: 1px;
-    left: 1px;
-    width: 100%;
-    height: 50px;
-    color: white;
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.self-center {
-    margin: auto;
-}
+#9cd3f9
 
 
+*/
