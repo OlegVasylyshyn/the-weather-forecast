@@ -1,17 +1,15 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>The Weather Forecast</title>
+    <title>Weather</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contacts.css">
     <link rel="shortcut icon" href="./img/weather-favicon.png">
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-default">
@@ -30,38 +28,40 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active" id="reset-button"><a href="#">Reset <span class="sr-only">(current)</span></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="contacts.html">Contacts</a></li>
+                        <li class="active" id="reset-button"><a href="index.html">Back <span class="sr-only">(current)</span></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div id="country-dropdown" class="center">
-            <h2>Choose your country</h2>
-            <select id="country-select" class="selectpicker" data-live-search="true">
-                <!--<option disabled selected value>--</option>-->
-                <option data-tokens="ukraine">Ukraine</option>
-                <option data-tokens="germany">Germany</option>
-                <option data-tokens="italy">Italy</option>
-                <option data-tokens="spain">Spain</option>
-            </select>
-        </div>
-        <div id="city-dropdown" hidden>
-            <h2>Choose your city</h2>
-            <select id="city-select" class="selectpicker" data-live-search="true">
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-            </select>
-        </div>
-        <div id="button-main-div" hidden>
-            <h2>Here we go</h2>
-            <div id="button-div">
-                <button type="button" id="weather-button" class="btn btn-info">Show the weather</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                     <div class="form-area">  
+                        <form role="form">
+                            <br style="clear:both">
+                            <h3 style="margin-bottom: 25px; text-align: center;">Contact Me</h3>
+            				<div class="form-group">
+        						<input type="text" class="form-control background" id="name" name="name" placeholder="Name" required>
+        					</div>
+        					<div class="form-group">
+        						<input type="text" class="form-control background" id="email" name="email" placeholder="Email" required>
+        					</div>
+        					<div class="form-group">
+        						<input type="text" class="form-control background" id="mobile" name="mobile" placeholder="Mobile Number" required>
+        					</div>
+        					<div class="form-group">
+        						<input type="text" class="form-control background" id="subject" name="subject" placeholder="Subject" required>
+        					</div>
+                            <div class="form-group">
+                            <textarea class="form-control background" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                                <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+                            </div>
+                            <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -73,13 +73,10 @@
 
         </div>
     </footer>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="js/contacts.js"></script>
 </body>
-
 </html>

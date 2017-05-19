@@ -1,0 +1,13 @@
+.background {
+    background-color: #87CEFA;
+}
+
+::-webkit-input-placeholder {color:#c0392b;}
+::-moz-placeholder          {color:#c0392b;}
+:-moz-placeholder           {color:#c0392b;}
+:-ms-input-placeholder      {color:#c0392b;}    
+::-ms-input-placeholder      {color:#c0392b;} 
+
+.help-block {
+    color: white;
+}
