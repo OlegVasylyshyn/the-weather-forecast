@@ -9,9 +9,6 @@ html, body {
     max-width: 2000px;
 }
 
-
-
-
 footer {
     position: fixed;
     bottom: 1px;
@@ -42,4 +39,16 @@ footer {
 .navbar-default .navbar-nav>.active>a:focus, 
 .navbar-default .navbar-nav>.active>a:hover {
     background-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
 }
