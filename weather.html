@@ -1,17 +1,15 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>The Weather Forecast</title>
+    <title>Weather</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/weather.css">
     <link rel="shortcut icon" href="./img/weather-favicon.png">
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-default">
@@ -40,30 +38,36 @@
         </nav>
     </header>
     <main>
-        <div id="country-dropdown" class="center">
-            <h2>Choose your country</h2>
-            <select id="country-select" class="selectpicker" data-live-search="true">
-                <!--<option disabled selected value>--</option>-->
-                <option data-tokens="ukraine">Ukraine</option>
-                <option data-tokens="germany">Germany</option>
-                <option data-tokens="italy">Italy</option>
-                <option data-tokens="spain">Spain</option>
-            </select>
-        </div>
-        <div id="city-dropdown" hidden>
-            <h2>Choose your city</h2>
-            <select id="city-select" class="selectpicker" data-live-search="true">
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-                <option data-tokens="this">this tag will be dynamically initialized</option>
-            </select>
-        </div>
-        <div id="button-main-div" hidden>
-            <h2>Here we go</h2>
-            <div id="button-div">
-                <button type="button" id="weather-button" class="btn btn-info">Show the weather</button>
-            </div>
-        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
         <div>
@@ -73,13 +77,9 @@
 
         </div>
     </footer>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-    <script src="./js/index.js"></script>
 </body>
-
 </html>
