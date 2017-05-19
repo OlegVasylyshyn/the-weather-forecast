@@ -1,0 +1,1 @@
+var countries= ['Ukraine', 'Germany', 'Italy', 'Poland', 'Spain'];

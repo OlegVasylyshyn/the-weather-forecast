@@ -1,8 +1,23 @@
 $(function(){
     
-    $('#country-select').on('change', function(){
+    var selectedCities;
+    
+    $('#country-select').on('change', function(e){
         $('#country-dropdown').hide("slide", { direction: "left", distance: 2000 }, 1000);
         $('#city-dropdown').show("slide", { direction: "right", distance: 2000 }, 1000).addClass('center');
+        
+        let cityJSON = './js/cities/' + e.target.value.toLowerCase()  + '-cities.js';
+        $.getScript(cityJSON, function(){
+            console.log(cities);
+            selectedCities = cities;
+            for(var cityName in selectedCities) {
+                $('#city-select').append('<option data-tokens="' + cityName + '" id="' + cityName + '">'+ cityName.capitalize() +'</option>');    
+                console.log('created ' + cityName + ' option');
+            }
+            $('.selectpicker').selectpicker();
+            $('.selectpicker').selectpicker('refresh');
+            
+        });
     });
     
     $('#country-dropdown').on('loaded.bs.select', function() {
@@ -23,11 +38,14 @@ $(function(){
     });
     
     $('#reset-button').on('click', function(e) {
-        console.log("CLICK");
         e.preventDefault(); 
         $('#city-dropdown').hide("slide", { direction: "left", distance: 2000 }, 1000);
         $('#button-main-div').hide("slide", { direction: "left", distance: 2000 }, 1000);
         $('#country-dropdown').show("slide", { direction: "right", distance: 2000 }, 1000).addClass('center');
+        
+        $('#city-select option').remove();
+        $('.selectpicker').selectpicker();
+        $('.selectpicker').selectpicker('refresh');
     });
     
     $('#weather-button').on('click', function() {
@@ -38,6 +56,7 @@ $(function(){
         
         window.location='./weather.html';
         
-    })
+    });
+    
     
 });
