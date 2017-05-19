@@ -13,3 +13,7 @@ main {
 .small-th {
     width: 200px;
 }
+
+table {
+    font-size: 26px;
+}
