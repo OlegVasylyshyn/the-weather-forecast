@@ -11,3 +11,5 @@
 .help-block {
     color: white;
 }
+
+input::placeholder {  color: red;}
