@@ -1,20 +1,9 @@
-const CURRENT_WEATHER_KEY = 'currentWeather';
 const WEATHER_ID_KEY = 'city';
 const KEY = 'bf60adeff8674d99bef174414172005';
 const URL = 'https://api.apixu.com/v1/current.json';
 
 $(function(){
-    
-    var weather = window.localStorage.getItem(CURRENT_WEATHER_KEY);  
-    
-    if(weather){
-        console.log('Current weather was found', weather);
-        setWeather(weather);
-    } else {
-        console.log('Current weather was not found');
-        getWeather();
-    }
-    
+    getWeather();
 });
 
 function getWeather(){
@@ -32,8 +21,7 @@ function getWeather(){
             data: requestParam
     }).done(function(response) {
             console.log('Response: ', response);
-            setWeather(response);  
-            window.localStorage.setItem(CURRENT_WEATHER_KEY, JSON.stringify(response));
+            setWeather(response);
     });
     
 }
@@ -52,6 +40,3 @@ function setWeather(weather){
     mainHeader.innerHTML = 'The weather is ' + generalWeather + ' in ' + city;
 }
 
-
-
-// http://api.openweathermap.org/data/2.5/forecast?id=6542283&APPID=f6bd96535f3e918c7e0dc0d5b2eda409
