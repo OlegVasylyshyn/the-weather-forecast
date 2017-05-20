@@ -1,8 +1,8 @@
 // Ukraine
 var cities = {
     
-    kiev: 1,
-    lviv: 2,
-    odessa: 3
+    kiev: 703448,
+    lviv: 702550,
+    odessa: 698740
     
 };

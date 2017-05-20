@@ -1,8 +1,8 @@
 // Spain
 var cities = {
     
-    madrid: 1,
-    barselona: 2,
-    seville: 3
+    madrid: 6359304,
+    barcelona: 6356055,
+    seville: 6361046
     
 };

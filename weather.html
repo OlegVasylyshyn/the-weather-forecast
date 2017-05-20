@@ -38,7 +38,7 @@
         </nav>
     </header>
     <main>
-        <h2>The weather is clear</h2>
+        <h2 id="mainHeader">The weather is clear</h2>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -52,23 +52,27 @@
                         <tbody>
                             <tr>
                                 <th scope="row" class="small-th">Temperature</th>
-                                <td class="left-values">25 °C</td>
+                                <td class="left-values" id="temperature"></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Pressure</th>
-                                <td class="left-values">1013.75</td>
+                                <td class="left-values" id="pressure"></td>
                             </tr>
-                            <tr>
+                            <tr>pressure
                                 <th scope="row" class="small-th">Humidity</th>
-                                <td class="left-values">100 %</td>
+                                <td class="left-values" id="humidity"></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Wind</th>
-                                <td class="left-values">speed : 5.52, deg: 311°</td>
+                                <td class="left-values" id="wind"></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="small-th">Clouds</th>
-                                <td class="left-values">None</td>
+                                <td class="left-values" id="clouds"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="small-th">Rain</th>
+                                <td class="left-values" id="rain"></td>
                             </tr>
                         </tbody>
                     </table>    
@@ -88,5 +92,6 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

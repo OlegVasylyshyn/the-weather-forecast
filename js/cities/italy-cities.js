@@ -1,8 +1,8 @@
 // Italy
 var cities = {
     
-    rome: 1,
-    milan: 2,
-    naples: 3
+    rome: 3169070,
+    milan: 6542283,
+    napoli: 3172394
     
 };

@@ -1,8 +1,8 @@
 // Poland
 var cities = {
     
-    warsaw: 1,
-    krakow: 2,
-    wroslaw: 3
+    warsaw: 756135,
+    krakow: 3094802,
+    wroslaw: 3081366
     
 };
