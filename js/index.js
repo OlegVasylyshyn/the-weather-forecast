@@ -17,13 +17,14 @@ $(function(){
             $('.selectpicker').selectpicker();
             $('.selectpicker').selectpicker('refresh');
             
+            setLoadBsSelectCity();
+            setLoadBsSelectCountry();
+            
         });
     });
     
     $('#country-dropdown').on('loaded.bs.select', function() {
-        $("#country-dropdown div div ul li").click(function(e){
-            $('#country-select').change();
-        });
+        setLoadBsSelectCountry();
     });
     
     $('#city-select').on('change', function(){
@@ -32,9 +33,7 @@ $(function(){
     });
     
     $('#city-dropdown').on('loaded.bs.select', function() {
-        $("#city-dropdown div div ul li").click(function(e){
-            $('#city-select').change();
-        });
+            setLoadBsSelectCity();
     });
     
     $('#reset-button').on('click', function(e) {
@@ -46,6 +45,11 @@ $(function(){
         $('#city-select option').remove();
         $('.selectpicker').selectpicker();
         $('.selectpicker').selectpicker('refresh');
+        
+        
+        setLoadBsSelectCity();
+        setLoadBsSelectCountry();
+        
     });
     
     $('#weather-button').on('click', function() {
@@ -60,3 +64,16 @@ $(function(){
     
     
 });
+
+
+var setLoadBsSelectCountry = function(){
+        $("#country-dropdown div div ul li").click(function(e){
+            $('#country-select').change();
+        });
+};
+
+var setLoadBsSelectCity = function(){
+    $("#city-dropdown div div ul li").click(function(e){
+        $('#city-select').change();
+    });
+};
