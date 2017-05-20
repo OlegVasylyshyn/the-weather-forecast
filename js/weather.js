@@ -37,6 +37,6 @@ function setWeather(weather){
     let city = weather.location.name;
     let generalWeather = weather.current.condition.text;
     
-    mainHeader.innerHTML = 'The weather is ' + generalWeather + ' in ' + city;
+    mainHeader.innerHTML = 'The weather is ' + generalWeather.toLowerCase() + ' in ' + city;
 }
 
