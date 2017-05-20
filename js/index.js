@@ -24,8 +24,8 @@ $(function(){
     });
     
     $('#weather-button').on('click', function() {
-        let id = selectedCities['' + selectedCity.toLowerCase()];
-        window.sessionStorage.setItem('weatherId', id);
+        // let id = selectedCities['' + selectedCity.toLowerCase()];
+        window.sessionStorage.setItem('city', selectedCity.toLowerCase());
         window.location='./weather.html';
     });
     

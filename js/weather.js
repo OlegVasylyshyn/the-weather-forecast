@@ -1,7 +1,7 @@
 const CURRENT_WEATHER_KEY = 'currentWeather';
-const WEATHER_ID_KEY = 'weatherId';
-const APPID = '1c850f75925b64208acceab7e4df52e6';
-const URL = 'http://api.openweathermap.org/data/2.5/forecast';
+const WEATHER_ID_KEY = 'city';
+const KEY = 'bf60adeff8674d99bef174414172005';
+const URL = 'https://api.apixu.com/v1/current.json';
 
 $(function(){
     
@@ -19,12 +19,12 @@ $(function(){
 
 function getWeather(){
     
-    let weatherId = window.sessionStorage.getItem(WEATHER_ID_KEY);
+    let city = window.sessionStorage.getItem(WEATHER_ID_KEY);
     let requestParam = {};
-    requestParam.id = weatherId;
-    requestParam.APPID = APPID;
+    requestParam.q = city;
+    requestParam.key = KEY;
     
-    console.log('WEATHER_ID_KEY', weatherId);
+    console.log('WEATHER_ID_KEY', city);
 
     $.ajax({
             method: 'GET',
@@ -32,21 +32,22 @@ function getWeather(){
             data: requestParam
     }).done(function(response) {
             console.log('Response: ', response);
-            setWeather(response.list[0]);  // first element it's the current weather
+            setWeather(response);  
+            window.localStorage.setItem(CURRENT_WEATHER_KEY, JSON.stringify(response));
     });
-    window.localStorage.setItem(CURRENT_WEATHER_KEY, JSON.stringify(toReturn));
+    
 }
 
 function setWeather(weather){
-    temperature.innerHTML = weather.main.temp - 273.15 + ' °C';
-    pressure.innerHTML = weather.main.pressure;
-    humidity.innerHTML = weather.main.humidity + ' %';
-    wind.innerHTML = 'speed: ' + weather.wind.speed + ', deg: ' + weather.wind.deg + '°';
-    clouds.innerHTML = weather.clouds.all && weather.clouds.all > 0 ? weather.clouds.all : 'none';
-    rain.innerHTML = weather.rain;
+    temperature.innerHTML = weather.current.temp_c + ' °C';
+    pressure.innerHTML = weather.current.pressure_mb;
+    humidity.innerHTML = weather.current.humidity + ' %';
+    wind.innerHTML = 'speed: ' + weather.current.wind_kph + ', deg: ' + weather.current.wind_degree + '°';
+    clouds.innerHTML = weather.current.cloud > 0 ? weather.current.cloud : 'none';
+    general.innerHTML = weather.current.condition.text;
     
-    let city = weather.city.name;
-    let generalWeather = weather.weather[0].main;
+    let city = weather.location.name;
+    let generalWeather = weather.current.condition.text;
     
     mainHeader.innerHTML = 'The weather is ' + generalWeather + ' in ' + city;
 }
