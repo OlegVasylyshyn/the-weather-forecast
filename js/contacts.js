@@ -15,4 +15,26 @@ $(document).ready(function(){
             $('#characterLeft').removeClass('red');            
         }
     });    
+    
+    
+    $('#submit').on('click', function(e){
+        e.preventDefault();
+        
+        // send form somewhere
+        
+        $('#formDiv').hide();
+        $('#myModal').modal('show');
+        
+    });
+    
+    $('#closeModel').on('click', function(){
+        
+        $('#myModal').modal('hide');
+        $('#formDiv').show();
+        
+    });
+    
+    
+    
 });
+
