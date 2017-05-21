@@ -20,7 +20,21 @@ $(document).ready(function(){
     $('#submit').on('click', function(e){
         e.preventDefault();
         
-        // send form somewhere
+        let submitForm = {};
+        submitForm.name = nameInput.value;
+        submitForm.email = email.value;
+        submitForm.mobile = mobile.value;
+        submitForm.subject = subject.value;
+        submitForm.message = message.value;
+        
+        if(!checkSubmitForm(submitForm)) {
+            // sum message with error
+            console.error('Invalid submitForm', submitForm);
+            return;
+        }
+        
+        submit(submitForm);
+        
         
         $('#formDiv').hide();
         $('#myModal').modal('show');
@@ -37,4 +51,25 @@ $(document).ready(function(){
     
     
 });
+
+function checkSubmitForm(submitForm){
+    if(!submitForm.name || submitForm.name.length === 0) return false;
+    if(!submitForm.email || submitForm.email.length === 0) return false;
+    if(!submitForm.mobile || submitForm.mobile.length === 0) return false;
+    if(!submitForm.subject || submitForm.subject.length === 0) return false;
+    if(!submitForm.message || submitForm.message.length === 0) return false;
+
+    return true;
+}
+
+function submit(submitForm){
+    $.ajax({
+            method: 'POST',
+            url: URL,
+            data: submitForm
+    }).done(function(response) {
+            console.info('Form was successfully submited');
+            console.log('Response: ', response);
+    });
+}
 
