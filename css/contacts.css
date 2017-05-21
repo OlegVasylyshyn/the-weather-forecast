@@ -9,6 +9,8 @@
 
 .black-placeholder::placeholder {  color: black;}
 
+.red-placeholder::placeholder {  color: red;}
+
 br {
     clear:both;
 }
